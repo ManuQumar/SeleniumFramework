@@ -1,4 +1,4 @@
-package SeleniumFramWork.PracticeFrameWork;
+package SeleniumFramWork.Tests;
 
 import java.time.Duration;
 import java.util.List;
@@ -50,14 +50,14 @@ public class StandaloneTest {
 //				JavascriptExecutor js = (JavascriptExecutor) driver;
 //
 //				js.executeScript("argument[0].click();", element);
-					List<WebElement> CardProducts=	driver.findElements(By.cssSelector(".cartSection h3"));
-		Boolean ProdMatch=			CardProducts.stream().anyMatch(CartProduct->CartProduct.getText().equalsIgnoreCase(Item));
+					List<WebElement> CartProducts=	driver.findElements(By.cssSelector(".cartSection h3"));
+		Boolean ProdMatch=			CartProducts.stream().anyMatch(CartProduct->CartProduct.getText().equalsIgnoreCase(Item));
 		Assert.assertTrue(ProdMatch);
 		System.out.println("I am exicuted till 53 line");
-		driver.findElement(By.xpath("//button[contains(text(),'Checkout')]")).click();
+		driver.findElement(By.cssSelector(".totalRow button")).click();
 		Actions Payment= new Actions(driver);
 		Payment.sendKeys(driver.findElement(By.cssSelector("[placeholder='Select Country']")), "India").build().perform();
-		List<WebElement> AutoSuggest =driver.findElements(By.cssSelector(".ta-item"));
+	//	List<WebElement> AutoSuggest =driver.findElements(By.cssSelector(".ta-item"));
 		driver.findElement(By.cssSelector(".ta-item:nth-child(3)")).click();
 //		for( WebElement DropDown : AutoSuggest) {
 //			DropDown.getText().equalsIgnoreCase("India");
@@ -68,6 +68,7 @@ public class StandaloneTest {
 		String Order_Confir_MSG=driver.findElement(By.cssSelector(".hero-primary")).getText();
 		Assert.assertEquals(Order_Confir_MSG, "THANKYOU FOR THE ORDER.");
 		System.out.println("End to End Login PipeLine is executed ");
+		driver.close();
 	}
 
 }

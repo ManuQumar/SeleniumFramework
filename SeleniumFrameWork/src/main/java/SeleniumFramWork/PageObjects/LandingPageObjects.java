@@ -26,9 +26,11 @@ public class LandingPageObjects {
 		Email.sendKeys(EmailId);
 		Password.sendKeys(Pswrd);
 		Submit.click();
+		
 	}
 	public void goTO() {
 		driver.get("https://rahulshettyacademy.com/client");
+	
 	}
 //	public void UserId() {
 //		driver.findElement(UserId);

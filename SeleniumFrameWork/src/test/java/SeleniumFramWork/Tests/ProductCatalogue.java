@@ -1,4 +1,4 @@
-package SeleniumFramWork.PracticeFrameWork;
+package SeleniumFramWork.Tests;
 
 import java.util.List;
 

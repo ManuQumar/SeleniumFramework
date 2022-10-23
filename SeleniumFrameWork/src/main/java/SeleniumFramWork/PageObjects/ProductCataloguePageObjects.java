@@ -23,7 +23,7 @@ public class ProductCataloguePageObjects extends AbstractComponent{
 	// we can declare here without hardcoding like WaitForTheElementsToLoad(By.cssSelector(".mb-3"));
 	By ProductToLoad= By.cssSelector(".mb-3");
 	By AddToCart = By.cssSelector(".card-body button:last-of-type");
-	By toastMessage =By.cssSelector("#toast-contain");
+	By toastMessage = By.cssSelector("#toast-container");
 	public List<WebElement> getProductsList() 
 	{
 		WaitForTheElementsToLoad(ProductToLoad);
@@ -37,11 +37,11 @@ public class ProductCataloguePageObjects extends AbstractComponent{
 			return Prod;
 	}
 	//		Prod.findElement(By.cssSelector(".card-body button:last-of-type")).click(); this we are writing as
-	public void addProductToCart(String productName){
+	public void addProductToCart(String productName) throws InterruptedException{
 		WebElement Prod= getProductsByName(productName);
 		Prod.findElement(AddToCart).click();
 		WaitForTheElementsToLoad(toastMessage);
 		WaitForElementTODisapper(Invisible);
-		
+	
 	}
 }
