@@ -7,7 +7,9 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 
 import SeleniumFramWork.PageObjects.LandingPageObjects;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -38,10 +40,17 @@ public class BaseTest {
 	return driver;
 	
 	}
+	// these Before Method and After method are common so we use testNG feature of alwaysRun=true
+	@BeforeMethod(alwaysRun=true)
 	public LandingPageObjects LaunchApplication() throws IOException {
 		 driver= initializeDriver();
 		 LP= new LandingPageObjects(driver);
 		LP.goTO();
 		return LP;
 	}
+	@AfterMethod(alwaysRun=true)
+	public void TearDown() {
+	driver.close();
+}
+	
 }

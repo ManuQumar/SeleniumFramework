@@ -20,12 +20,21 @@ public class AbstractComponent {
 	@FindBy(css="[routerlink*='cart']")
 	WebElement cartHeader;
 	
+	@FindBy(css="button[routerlink*='myorders']")
+	WebElement orderHeader;
 	public void WaitForTheElementsToLoad(By findBy) {
 	WebDriverWait Wait= new WebDriverWait(driver, Duration.ofSeconds(5)); 
 	Wait.until(ExpectedConditions.visibilityOfElementLocated(findBy));
 }
+	public void WaitForTheWebElementToApper(WebElement Element) {
+	WebDriverWait Wait= new WebDriverWait(driver, Duration.ofSeconds(5)); 
+	Wait.until(ExpectedConditions.visibilityOf(Element));
+}
 	public void goToCartPage() {
 		cartHeader.click();
+	}
+	public void goToOrderPage() {
+		orderHeader.click();
 	}
 	public void WaitForElementTODisapper(WebElement Ele) throws InterruptedException  {
 		Thread.sleep(1000);
