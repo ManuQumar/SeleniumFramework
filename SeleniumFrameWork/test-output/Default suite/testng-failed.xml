@@ -7,7 +7,7 @@
         <methods>
           <include name="TearDown"/>
           <include name="LaunchApplication"/>
-          <include name="SubmitOrder"/>
+          <include name="SubmitOrder" invocation-numbers="0 1"/>
           <include name="OrderHistory"/>
         </methods>
       </class> <!-- SeleniumFramWork.Tests.SubmitOrderTestTunning -->

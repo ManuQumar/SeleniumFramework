@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-_Suite" class="navigator-link ">
-                    <span>C:\Users\Manohar\git\SeleniumFramework\SeleniumFrameWork\testSuites\ErrorValidationTests.xml</span>
+                    <span>C:\Users\Manohar\git\SeleniumFramework\SeleniumFrameWork\testSuites\purchaseOrder.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,7 +102,12 @@
                     <div class="method-list-content passed suite-_Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-_Suite" title="SeleniumFramWork.Tests.ErrorValidationsTest" class="method navigator-link" hash-for-method="LogInErrorValidations">LogInErrorValidations</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-_Suite" title="SeleniumFramWork.Tests.SubmitOrderTestTunning" class="method navigator-link" hash-for-method="SubmitOrder({EmailId=manum7792@gmail.com, ProductName=ZARA COAT 3, Password=Rahul@123})">SubmitOrder({EmailId=manum7792@gmail.com, ProductName=ZARA COAT 3, Password=Rahul@123})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-_Suite" title="SeleniumFramWork.Tests.SubmitOrderTestTunning" class="method navigator-link" hash-for-method="SubmitOrder({EmailId=paul@gmail.com, ProductName=ADIDAS ORIGINAL, Password=Paul@321})">SubmitOrder({EmailId=paul@gmail.com, ProductName=ADIDAS ORIGINAL, Password=Paul@321})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-_Suite -->
@@ -120,14 +125,23 @@
           <div class="suite-_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">SeleniumFramWork.Tests.ErrorValidationsTest</span>
+              <span class="class-name">SeleniumFramWork.Tests.SubmitOrderTestTunning</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="LogInErrorValidations">
-                  </a> <!-- LogInErrorValidations -->
-                  <span class="method-name">LogInErrorValidations</span>
+                  <a name="SubmitOrder({EmailId=manum7792@gmail.com, ProductName=ZARA COAT 3, Password=Rahul@123})">
+                  </a> <!-- SubmitOrder({EmailId=manum7792@gmail.com, ProductName=ZARA COAT 3, Password=Rahul@123}) -->
+                  <span class="method-name">SubmitOrder</span>
+                  <span class="parameters">({EmailId=manum7792@gmail.com, ProductName=ZARA COAT 3, Password=Rahul@123})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="SubmitOrder({EmailId=paul@gmail.com, ProductName=ADIDAS ORIGINAL, Password=Paul@321})">
+                  </a> <!-- SubmitOrder({EmailId=paul@gmail.com, ProductName=ADIDAS ORIGINAL, Password=Paul@321}) -->
+                  <span class="method-name">SubmitOrder</span>
+                  <span class="parameters">({EmailId=paul@gmail.com, ProductName=ADIDAS ORIGINAL, Password=Paul@321})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -135,7 +149,7 @@
         </div> <!-- panel _Suite -->
         <div panel-name="test-xml-_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Manohar\git\SeleniumFramework\SeleniumFrameWork\testSuites\ErrorValidationTests.xml</span>
+            <span class="header-content">C:\Users\Manohar\git\SeleniumFramework\SeleniumFrameWork\testSuites\purchaseOrder.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -144,7 +158,7 @@
 &lt;suite parallel=&quot;tests&quot; name=&quot; Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;groups&gt;
     &lt;run&gt;
-      &lt;include name=&quot;ErrorHandling&quot;/&gt;
+      &lt;include name=&quot;purchaseOrder&quot;/&gt;
     &lt;/run&gt;
   &lt;/groups&gt;
   &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Submit Order &quot;&gt;
@@ -182,10 +196,10 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">ErrorHandling</span>
+              <span class="test-group-name">purchaseOrder</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">LogInErrorValidations</span>
+                <span class="method-in-group-name">SubmitOrder</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -205,16 +219,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'LogInErrorValidations')
-data.setCell(0, 2, 'SeleniumFramWork.Tests.ErrorValidationsTest')
-data.setCell(0, 3, 459);
+data.setCell(0, 1, 'SubmitOrder')
+data.setCell(0, 2, 'SeleniumFramWork.Tests.SubmitOrderTestTunning')
+data.setCell(0, 3, 3052);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'SubmitOrder')
+data.setCell(1, 2, 'SeleniumFramWork.Tests.SubmitOrderTestTunning')
+data.setCell(1, 3, 2940);
 window.suiteTableData['_Suite']= { tableData: data, tableDiv: 'times-div-_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 459 ms</span>
+              <span class="suite-total-time">Total running time: 5 seconds</span>
               <div id="times-div-_Suite">
               </div> <!-- times-div-_Suite -->
             </div> <!-- times-div -->
@@ -233,18 +251,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">SeleniumFramWork.Tests.ErrorValidationsTest</span>
+              <span class="ignored-class-name">SeleniumFramWork.Tests.SubmitOrderTestTunning</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">ProductErrorvalidation</span>
+                <span class="ignored-method-name">OrderHistory</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
-              <span class="ignored-class-name">SeleniumFramWork.Tests.SubmitOrderTestTunning</span>
+              <span class="ignored-class-name">SeleniumFramWork.Tests.ErrorValidationsTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">SubmitOrder</span>
+                <span class="ignored-method-name">LogInErrorValidations</span>
                 <br/>
-                <span class="ignored-method-name">OrderHistory</span>
+                <span class="ignored-method-name">ProductErrorvalidation</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -256,18 +274,30 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">SeleniumFramWork.Tests.ErrorValidationsTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">SeleniumFramWork.Tests.SubmitOrderTestTunning</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">LaunchApplication</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">LogInErrorValidations</span>
-                <span class="method-start">3895 ms</span>
+                <span class="method-name">SubmitOrder({EmailId=manum7792@gmail.com, ProductName=ZARA COAT 3, Password=Rahul@123})</span>
+                <span class="method-start">2802 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">TearDown</span>
-                <span class="method-start">4356 ms</span>
+                <span class="method-start">5856 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">LaunchApplication</span>
+                <span class="method-start">5974 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">SubmitOrder({EmailId=paul@gmail.com, ProductName=ADIDAS ORIGINAL, Password=Paul@321})</span>
+                <span class="method-start">7644 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">TearDown</span>
+                <span class="method-start">10586 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
