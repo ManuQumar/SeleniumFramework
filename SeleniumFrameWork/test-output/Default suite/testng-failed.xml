@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="SeleniumFramWork.Tests.SubmitOrderTestTunning">
+      <class name="SeleniumFramWork.Tests.ErrorValidationsTest">
         <methods>
+          <include name="LogInErrorValidations"/>
           <include name="TearDown"/>
           <include name="LaunchApplication"/>
-          <include name="SubmitOrder" invocation-numbers="0 1"/>
-          <include name="OrderHistory"/>
         </methods>
-      </class> <!-- SeleniumFramWork.Tests.SubmitOrderTestTunning -->
+      </class> <!-- SeleniumFramWork.Tests.ErrorValidationsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

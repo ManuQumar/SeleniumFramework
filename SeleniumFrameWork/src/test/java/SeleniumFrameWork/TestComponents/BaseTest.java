@@ -1,10 +1,14 @@
 package SeleniumFrameWork.TestComponents;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -40,8 +44,18 @@ public class BaseTest {
 	return driver;
 	
 	}
+	// derive the driver from ITestlisterns
+	public String getScreenshot(String testCaseName , WebDriver driver) throws IOException {
+		TakesScreenshot TS= (TakesScreenshot)driver;
+	File source=	TS.getScreenshotAs(OutputType.FILE);
+	File file= new File(System.getProperty("user.dir") +"//reports// "+testCaseName+ ".png");
+	FileUtils.copyFile(source, file);
+	return System.getProperty("user.dir" )+"//reports// " +testCaseName+ ".png";
+	}
 	// these Before Method and After method are common so we use testNG feature of alwaysRun=true
+	// if you want run for all the groups test cases then this Run=true is used as in groups concept it doesn't have knowledge to get execute this beforeMethod or aftermethod
 	@BeforeMethod(alwaysRun=true)
+	//@BeforeTest(alwaysRun=true)
 	public LandingPageObjects LaunchApplication() throws IOException {
 		 driver= initializeDriver();
 		 LP= new LandingPageObjects(driver);

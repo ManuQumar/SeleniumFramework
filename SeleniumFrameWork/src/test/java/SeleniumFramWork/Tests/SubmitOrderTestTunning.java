@@ -1,9 +1,14 @@
 package SeleniumFramWork.Tests;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.FilenameUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
@@ -18,10 +23,12 @@ import SeleniumFramWork.PageObjects.ProductCataloguePageObjects;
 import SeleniumFrameWork.TestComponents.BaseTest;
 
 public class SubmitOrderTestTunning extends BaseTest{
-//	String ProductName="ZARA COAT 3";
+	String ProductName="ZARA COAT 3";
 	@Test(dataProvider= "getData" , groups={"purchaseOrder"})
 	// passing the strings and grouping to run this test Individually
 //	public void SubmitOrder(String EmailId , String Password, String ProductName) throws IOException, InterruptedException {
+	
+	
 	public void SubmitOrder(HashMap<String , String> input) throws IOException, InterruptedException {
 
 	// here we drive the parameters using HashMap so commenting the above line	
@@ -29,6 +36,8 @@ public class SubmitOrderTestTunning extends BaseTest{
 		// as we extending the BaseTest we can have the access of Parent variables 
 		//As we using testNG method with the help of @BeforeTest annotation we can comment the below line
 //	LandingPageObjects LP=	LaunchApplication();
+		
+		
 	LP.Loginapp(input.get("EmailId"),input.get("Password"));
 	ProductCataloguePageObjects Prod= new ProductCataloguePageObjects(driver);
 		List<WebElement> products=Prod.getProductsList();
@@ -46,7 +55,7 @@ public class SubmitOrderTestTunning extends BaseTest{
 	System.out.println(confirmMessage);
 }
 	@Test(dependsOnMethods={"SubmitOrder"})
-	public void OrderHistory(String ProductName) {
+	public void OrderHistory( ) {
 		LP.Loginapp("manum7792@gmail.com", "Rahul@123");
 		ProductCataloguePageObjects Prod= new ProductCataloguePageObjects(driver);
 		Prod.goToOrderPage();
@@ -54,6 +63,7 @@ public class SubmitOrderTestTunning extends BaseTest{
 	Assert.assertTrue(OrdersPage.VerifyOrderDisplay(ProductName));
 	System.out.println("Done!");
 	}
+	
 	// here Implementing testNG data Provider to run the test with mutiple set of Data
 	@DataProvider
 	public Object[][] getData() {
