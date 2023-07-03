@@ -21,7 +21,7 @@ public void LogInErrorValidations() {
 	
 	//here with the help of beforeMethod annotation we hit the desired site by running till this line
 	LP.Loginapp("manasa7792@gmail.com", "Rahul@123");
-	Assert.assertEquals(LP.LoginValidation(), "Incorrect email or pass7word.");
+	Assert.assertEquals(LP.LoginValidation(), "Incorrect email or padssword.");
 	System.out.println("I am done");
 }
 @Test

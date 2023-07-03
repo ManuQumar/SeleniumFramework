@@ -1,129 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
+<testng-results ignored="3" total="5" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-10-26T19:54:52Z" name=" Suite" finished-at="2022-10-26T19:55:08Z" duration-ms="15938">
+  <suite started-at="2023-07-03T18:14:20Z" name=" Suite" finished-at="2023-07-03T18:14:31Z" duration-ms="11696">
     <groups>
-      <group name="ErrorHandling">
-        <method signature="ErrorValidationsTest.LogInErrorValidations()[pri:0, instance:SeleniumFramWork.Tests.ErrorValidationsTest@553f1d75]" name="LogInErrorValidations" class="SeleniumFramWork.Tests.ErrorValidationsTest"/>
-      </group> <!-- ErrorHandling -->
       <group name="purchaseOrder">
-        <method signature="SubmitOrderTestTunning.SubmitOrder(java.util.HashMap)[pri:0, instance:SeleniumFramWork.Tests.SubmitOrderTestTunning@630cb4a4]" name="SubmitOrder" class="SeleniumFramWork.Tests.SubmitOrderTestTunning"/>
+        <method signature="SubmitOrderTestTunning.SubmitOrder(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:SeleniumFramWork.Tests.SubmitOrderTestTunning@15713d56]" name="SubmitOrder" class="SeleniumFramWork.Tests.SubmitOrderTestTunning"/>
       </group> <!-- purchaseOrder -->
     </groups>
-    <test started-at="2022-10-26T19:54:52Z" name="Validating Errors" finished-at="2022-10-26T19:55:05Z" duration-ms="13481">
-      <class name="SeleniumFramWork.Tests.ErrorValidationsTest">
-        <test-method is-config="true" signature="LaunchApplication()[pri:0, instance:SeleniumFramWork.Tests.ErrorValidationsTest@553f1d75]" started-at="2022-10-26T19:54:52Z" name="LaunchApplication" finished-at="2022-10-26T19:54:57Z" duration-ms="5090" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LaunchApplication -->
-        <test-method signature="LogInErrorValidations()[pri:0, instance:SeleniumFramWork.Tests.ErrorValidationsTest@553f1d75]" started-at="2022-10-26T19:54:57Z" name="LogInErrorValidations" finished-at="2022-10-26T19:54:58Z" duration-ms="1253" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Incorrect email or pass7word.] but found [Incorrect email or password.]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Incorrect email or pass7word.] but found [Incorrect email or password.]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:453)
-at org.testng.Assert.assertEquals(Assert.java:463)
-at SeleniumFramWork.Tests.ErrorValidationsTest.LogInErrorValidations(ErrorValidationsTest.java:24)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
-at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:833)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LogInErrorValidations -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:SeleniumFramWork.Tests.ErrorValidationsTest@553f1d75]" started-at="2022-10-26T19:54:59Z" name="TearDown" finished-at="2022-10-26T19:54:59Z" duration-ms="136" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TearDown -->
-        <test-method is-config="true" signature="LaunchApplication()[pri:0, instance:SeleniumFramWork.Tests.ErrorValidationsTest@553f1d75]" started-at="2022-10-26T19:54:59Z" name="LaunchApplication" finished-at="2022-10-26T19:55:03Z" duration-ms="3869" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LaunchApplication -->
-        <test-method signature="ProductErrorvalidation()[pri:0, instance:SeleniumFramWork.Tests.ErrorValidationsTest@553f1d75]" started-at="2022-10-26T19:55:03Z" name="ProductErrorvalidation" finished-at="2022-10-26T19:55:05Z" duration-ms="2119" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ProductErrorvalidation -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:SeleniumFramWork.Tests.ErrorValidationsTest@553f1d75]" started-at="2022-10-26T19:55:05Z" name="TearDown" finished-at="2022-10-26T19:55:05Z" duration-ms="212" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TearDown -->
-      </class> <!-- SeleniumFramWork.Tests.ErrorValidationsTest -->
+    <test started-at="2023-07-03T18:14:20Z" name="Validating Errors" finished-at="2023-07-03T18:14:20Z" duration-ms="2">
     </test> <!-- Validating Errors -->
-    <test started-at="2022-10-26T19:54:52Z" name="Submit Order " finished-at="2022-10-26T19:55:08Z" duration-ms="15938">
+    <test started-at="2023-07-03T18:14:20Z" name="Submit Order " finished-at="2023-07-03T18:14:31Z" duration-ms="11696">
       <class name="SeleniumFramWork.Tests.SubmitOrderTestTunning">
-        <test-method is-config="true" signature="LaunchApplication()[pri:0, instance:SeleniumFramWork.Tests.SubmitOrderTestTunning@630cb4a4]" started-at="2022-10-26T19:54:52Z" name="LaunchApplication" finished-at="2022-10-26T19:54:56Z" duration-ms="3685" status="PASS">
+        <test-method is-config="true" signature="LaunchApplication()[pri:0, instance:SeleniumFramWork.Tests.SubmitOrderTestTunning@15713d56]" started-at="2023-07-03T18:14:20Z" name="LaunchApplication" finished-at="2023-07-03T18:14:23Z" duration-ms="3558" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LaunchApplication -->
-        <test-method signature="SubmitOrder(java.util.HashMap)[pri:0, instance:SeleniumFramWork.Tests.SubmitOrderTestTunning@630cb4a4]" started-at="2022-10-26T19:54:56Z" name="SubmitOrder" data-provider="getData" finished-at="2022-10-26T19:54:59Z" duration-ms="3930" status="PASS">
+        <test-method signature="SubmitOrder(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:SeleniumFramWork.Tests.SubmitOrderTestTunning@15713d56]" started-at="2023-07-03T18:14:23Z" name="SubmitOrder" data-provider="getData" finished-at="2023-07-03T18:14:26Z" duration-ms="2926" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{EmailId=manum7792@gmail.com, ProductName=ZARA COAT 3, Password=Rahul@123}]]>
+                <![CDATA[manum7792@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Rahul@123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ZARA COAT 3]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SubmitOrder -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:SeleniumFramWork.Tests.SubmitOrderTestTunning@630cb4a4]" started-at="2022-10-26T19:54:59Z" name="TearDown" finished-at="2022-10-26T19:55:00Z" duration-ms="315" status="PASS">
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:SeleniumFramWork.Tests.SubmitOrderTestTunning@15713d56]" started-at="2023-07-03T18:14:26Z" name="TearDown" finished-at="2023-07-03T18:14:26Z" duration-ms="136" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-        <test-method is-config="true" signature="LaunchApplication()[pri:0, instance:SeleniumFramWork.Tests.SubmitOrderTestTunning@630cb4a4]" started-at="2022-10-26T19:55:00Z" name="LaunchApplication" finished-at="2022-10-26T19:55:02Z" duration-ms="2036" status="PASS">
+        <test-method is-config="true" signature="LaunchApplication()[pri:0, instance:SeleniumFramWork.Tests.SubmitOrderTestTunning@15713d56]" started-at="2023-07-03T18:14:26Z" name="LaunchApplication" finished-at="2023-07-03T18:14:28Z" duration-ms="2019" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LaunchApplication -->
-        <test-method signature="SubmitOrder(java.util.HashMap)[pri:0, instance:SeleniumFramWork.Tests.SubmitOrderTestTunning@630cb4a4]" started-at="2022-10-26T19:55:02Z" name="SubmitOrder" data-provider="getData" finished-at="2022-10-26T19:55:05Z" duration-ms="2939" status="PASS">
+        <test-method signature="SubmitOrder(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:SeleniumFramWork.Tests.SubmitOrderTestTunning@15713d56]" started-at="2023-07-03T18:14:28Z" name="SubmitOrder" data-provider="getData" finished-at="2023-07-03T18:14:31Z" duration-ms="2922" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{EmailId=paul@gmail.com, ProductName=ADIDAS ORIGINAL, Password=Paul@321}]]>
+                <![CDATA[paul@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Paul@321]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ADIDAS ORIGINAL]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SubmitOrder -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:SeleniumFramWork.Tests.SubmitOrderTestTunning@630cb4a4]" started-at="2022-10-26T19:55:05Z" name="TearDown" finished-at="2022-10-26T19:55:05Z" duration-ms="147" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TearDown -->
-        <test-method is-config="true" signature="LaunchApplication()[pri:0, instance:SeleniumFramWork.Tests.SubmitOrderTestTunning@630cb4a4]" started-at="2022-10-26T19:55:05Z" name="LaunchApplication" finished-at="2022-10-26T19:55:07Z" duration-ms="1986" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LaunchApplication -->
-        <test-method signature="OrderHistory()[pri:0, instance:SeleniumFramWork.Tests.SubmitOrderTestTunning@630cb4a4]" started-at="2022-10-26T19:55:07Z" name="OrderHistory" finished-at="2022-10-26T19:55:08Z" depends-on-methods="SeleniumFramWork.Tests.SubmitOrderTestTunning.SubmitOrder" duration-ms="685" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- OrderHistory -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:SeleniumFramWork.Tests.SubmitOrderTestTunning@630cb4a4]" started-at="2022-10-26T19:55:08Z" name="TearDown" finished-at="2022-10-26T19:55:08Z" duration-ms="192" status="PASS">
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:SeleniumFramWork.Tests.SubmitOrderTestTunning@15713d56]" started-at="2023-07-03T18:14:31Z" name="TearDown" finished-at="2023-07-03T18:14:31Z" duration-ms="120" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->

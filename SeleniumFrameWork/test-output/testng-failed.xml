@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite parallel="tests" name="Failed suite [ Suite]" guice-stage="DEVELOPMENT">
-  <listeners>
-    <listener class-name="SeleniumFrameWork.TestComponents.Listeners"/>
-  </listeners>
-  <test thread-count="5" parallel="tests" name="Validating Errors(failed)">
+  <test thread-count="5" parallel="tests" name="Submit Order (failed)">
+    <groups>
+      <run>
+        <include name="purchaseOrder"/>
+      </run>
+    </groups>
     <classes>
-      <class name="SeleniumFramWork.Tests.ErrorValidationsTest">
+      <class name="SeleniumFramWork.Tests.SubmitOrderTestTunning">
         <methods>
-          <include name="LogInErrorValidations"/>
           <include name="TearDown"/>
           <include name="LaunchApplication"/>
+          <include name="SubmitOrder" invocation-numbers="0 1"/>
         </methods>
-      </class> <!-- SeleniumFramWork.Tests.ErrorValidationsTest -->
+      </class> <!-- SeleniumFramWork.Tests.SubmitOrderTestTunning -->
     </classes>
-  </test> <!-- Validating Errors(failed) -->
+  </test> <!-- Submit Order (failed) -->
 </suite> <!-- Failed suite [ Suite] -->

@@ -11,6 +11,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
@@ -20,6 +21,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
 	public WebDriver driver;
+	public ChromeOptions options;
 	public LandingPageObjects LP;
 	public WebDriver initializeDriver() throws IOException {
 		Properties Pro = new Properties();
@@ -29,11 +31,14 @@ public class BaseTest {
 	String browserName=	Pro.getProperty("browser");
 	if(browserName.equalsIgnoreCase("chrome")) {
 		WebDriverManager.chromedriver().setup();
-		 driver = new ChromeDriver();
+		options = new ChromeOptions();
+		options.addArguments("--remote-allow-origins=*");
+		options.setAcceptInsecureCerts(true);
+		 driver = new ChromeDriver(options);
 	}
 	else if(browserName.equalsIgnoreCase("firefox")) {
 		WebDriverManager.firefoxdriver().setup();
-		 driver = new ChromeDriver();
+		 driver = new ChromeDriver(options);
 		 driver.get("https://facebook.com");
 	}
 	else if(browserName.equalsIgnoreCase("edge")) {

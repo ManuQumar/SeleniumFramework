@@ -26,25 +26,15 @@ public class SubmitOrderTestTunning extends BaseTest{
 	String ProductName="ZARA COAT 3";
 	@Test(dataProvider= "getData" , groups={"purchaseOrder"})
 	// passing the strings and grouping to run this test Individually
-//	public void SubmitOrder(String EmailId , String Password, String ProductName) throws IOException, InterruptedException {
-	
-	
-	public void SubmitOrder(HashMap<String , String> input) throws IOException, InterruptedException {
+	public void SubmitOrder(String EmailId , String Password, String ProductName) throws IOException, InterruptedException {
 
-	// here we drive the parameters using HashMap so commenting the above line	
-		// Here I know we should hit the Login Page so I declared it in BaseTest LauchApplication method
-		// as we extending the BaseTest we can have the access of Parent variables 
-		//As we using testNG method with the help of @BeforeTest annotation we can comment the below line
-//	LandingPageObjects LP=	LaunchApplication();
-		
-		
-	LP.Loginapp(input.get("EmailId"),input.get("Password"));
+	LP.Loginapp(EmailId,Password);
 	ProductCataloguePageObjects Prod= new ProductCataloguePageObjects(driver);
 		List<WebElement> products=Prod.getProductsList();
-	Prod.addProductToCart(input.get("ProductName"));
+	Prod.addProductToCart(ProductName);
 	Prod.goToCartPage();
 	CartPageObjects CartPage= new CartPageObjects(driver);
- Boolean match=	CartPage.VerifyProductDisplay(input.get("ProductName"));
+ Boolean match=	CartPage.VerifyProductDisplay(ProductName);
     Assert.assertTrue(match);
 	CartPage.CheckOut();
 	CheckoutPageObjects CP= new CheckoutPageObjects(driver);
@@ -61,22 +51,14 @@ public class SubmitOrderTestTunning extends BaseTest{
 		Prod.goToOrderPage();
 		OrderPageObjects OrdersPage= new OrderPageObjects(driver);
 	Assert.assertTrue(OrdersPage.VerifyOrderDisplay(ProductName));
-	System.out.println("Done!");
+	System.out.println("Checked Order History!");
 	}
 	
 	// here Implementing testNG data Provider to run the test with mutiple set of Data
 	@DataProvider
-	public Object[][] getData() {
-		HashMap<String, String> HMap= new HashMap<String, String>();
-		HMap.put("EmailId", "manum7792@gmail.com");
-		HMap.put("Password", "Rahul@123");
-		HMap.putIfAbsent("ProductName", "ZARA COAT 3");
-		HashMap<String,String> HMap1 = new HashMap<String,String>();
-		HMap1.put("EmailId", "paul@gmail.com");
-		HMap1.put("Password", "Paul@321");
-		HMap1.put("ProductName", "ADIDAS ORIGINAL");
-		return	new Object[][] { {HMap }, {HMap1}};
-	//	return	new String[][] { {"manum7792@gmail.com" ,"Rahul@123","ZARA COAT 3" }, {"paul@gmail.com","Paul@321","ADIDAS ORIGINAL"}};
+	public String[][] getData() {
+		
+		return	new String[][] { {"manum7792@gmail.com" ,"Rahul@123","ZARA COAT 3" }, {"paul@gmail.com","Paul@321","ADIDAS ORIGINAL"}};
 	}
 	
 }
